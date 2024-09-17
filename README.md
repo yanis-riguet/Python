@@ -6,3 +6,6 @@
 -  Développer des tests
 -  automatiser les tests dans Docker
 -  Finir le TP CODE CI
+
+
+docker build -t fastapi-demo .
