@@ -25,5 +25,5 @@ Etape pour configurer son répo GIT en local:
 - git push origin main (dans le cas ou il y a un pb de login/password, générer un token sur github et le renseigner à la place du password)
 - git config --global user.name "yan-rig"
 - git config --global user.email "yanis.riguet@gmail.com"
-- git config --global credential.helper store (ceci enregistre les credentials sur la machine, plus besoin de se loguer H24 quand on push)
+- git config --global credential.helper store (plus besoin de se loguer H24 quand on push)
 
