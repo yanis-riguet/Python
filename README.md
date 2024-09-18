@@ -14,7 +14,7 @@ sudo docker-compose -f docker-compose.yml up
 
 ## Etape pour configurer son répo GIT en local:
 - créer une clé ssh
- - ssh-keygen -t ed25519 -C "yanis.riguet@gmail.com"
+  - ssh-keygen -t ed25519 -C "yanis.riguet@gmail.com"
  - eval "$(ssh-agent -s)"
  - ssh-add ~/.ssh/id_ed25519
  - cat ~/.ssh/id_ed25519.pub (copier l'entiereté de la clé et l'insérer dans son compte github)
