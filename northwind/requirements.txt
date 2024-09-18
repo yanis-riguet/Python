@@ -1,2 +1,4 @@
-flask
-redis
+fastapi
+sqlalchemy
+psycopg2-binary
+uvicorn
