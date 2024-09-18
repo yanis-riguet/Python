@@ -1,14 +1,14 @@
-from flask import Flask
-from redis import Redis
+from fastapi import FastAPI
+from sqlalchemy import create_engine, text
+from sqlalchemy.orm import sessionmaker
 
-app = Flask(__name__)
-redis = Redis(host='redis-container', port=6379)
+app = FastAPI()
+engine = create_engine('postgresql://postgres:postgres@db/northwind')
+Session = sessionmaker(bind=engine)
 
-@app.route('/')
-def hello():
-    redis.incr('hits')
-    return ' - - - This basic web page has been viewed {} time(s) - - -'.format(redis.get('hits'))
+@app.get('/')
+def read_root():
 
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
+    session = Session()
+    result = session.execute(text('SELECT customer_id, company_name, contact_name FROM customers LIMIT 10'))
+    return {'Customers info': [dict(customerid=row[0], companyname=row[1], contactname=row[2]) for row in result]}

@@ -1,4 +1,6 @@
+redis
 fastapi
+flask
 sqlalchemy
 psycopg2-binary
 uvicorn
