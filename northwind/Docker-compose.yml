@@ -36,6 +36,19 @@ services:
     networks:
       - db
 
+  app:
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    environment:
+      DB_HOST: db
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    networks:
+      - db
+
 networks:
   db:
     driver: bridge
