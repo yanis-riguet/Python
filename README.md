@@ -12,7 +12,7 @@ docker build -t fastapi-demo .
 sudo docker-compose -f docker-compose.yml up
 
 
-Etape pour configurer son répo GIT en local:
+## Etape pour configurer son répo GIT en local:
 - créer une clé ssh
  - ssh-keygen -t ed25519 -C "yanis.riguet@gmail.com"
  - eval "$(ssh-agent -s)"
