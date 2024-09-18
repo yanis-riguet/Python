@@ -9,3 +9,7 @@
 
 
 docker build -t fastapi-demo .
+
+Etape pour configurer son répo GIT en local:
+- créer une clé ssh
+	- 
