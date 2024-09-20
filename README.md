@@ -1,4 +1,4 @@
-# Python
+# Pour TP Python
 -  Préparer son environnement de développement (Python3.11; PIP; Unix)
 
 
