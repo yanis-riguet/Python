@@ -14,7 +14,7 @@ sudo docker-compose -f docker-compose.yml up
 
 ## Etape pour configurer son répo GIT en local:
 - créer une clé ssh
-  - ssh-keygen -t ed25519 -C "yanis.riguet@gmail.com"
+  - ssh-keygen -t ed25519 -C "adresse-mail"
   - eval "$(ssh-agent -s)"
   - ssh-add ~/.ssh/id_ed25519
   - cat ~/.ssh/id_ed25519.pub (copier l'entiereté de la clé et l'insérer dans son compte github)
@@ -26,6 +26,6 @@ sudo docker-compose -f docker-compose.yml up
   - git commit -m "commit"
   - git push origin main (dans le cas ou il y a un pb de login/password, générer un token sur github et le renseigner à la place du password)
   - git config --global user.name "yan-rig"
-  - git config --global user.email "yanis.riguet@gmail.com"
+  - git config --global user.email "adresse-mail"
   - git config --global credential.helper store (plus besoin de se loguer H24 quand on push)
 
